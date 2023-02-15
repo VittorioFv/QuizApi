@@ -1,4 +1,23 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+}
+#form{
+  display: flex;
+  justify-content: center;
+}
+form{
+  background-color: paleturquoise;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  border-radius: 50px;
+}
+.risposte{
+  margin-top: 10px;
+}
+label{
+  margin: 10px;
 }
