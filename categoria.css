@@ -14,3 +14,11 @@
 #film .icon{
     background-image: url("immagini/watching-movies.svg");
 }
+
+#libri .icon {
+    background-image: url("immagini/bookshelf.svg");
+}
+
+#videogame .icon {
+    background-image: url("immagini/smart-joystick.svg");
+}
