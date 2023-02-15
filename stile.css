@@ -2,6 +2,29 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+h2 {
+  text-align: center;
+}
+
+#scegliLaCategoria {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.categoria {
+  box-sizing: border-box;
+  border: 1px solid black;
+
+  margin: 2%;
+  width: 46%;
+  height: 42%;
+}
 #form{
   display: flex;
   justify-content: center;

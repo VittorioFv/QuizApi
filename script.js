@@ -45,14 +45,11 @@ function creaDomanda(categoria) {
     shuffle(risposte);
     
     let indiceRispostaCorretta = risposte.indexOf(data.results[0].correct_answer);
-    
-    document.getElementById("prova").innerHTML = domanda;
 
     console.log(domanda, risposte, indiceRispostaCorretta);
   }).catch(function (error) {
     alert(error);
   });
 }
-
 
 creaDomanda(1)
