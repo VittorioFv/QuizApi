@@ -6,7 +6,31 @@ var domanda = ""
 var risposte = []
 var indiceRispostaCorretta = 0
 
+function diventaVerde(elmento) {
+  elmento.classList.add("verde");
+}
+
 function buttaInHtml(domanda, risposte, indiceRispostaCorretta) {
+  document.getElementById("domanda").innerHTML = domanda
+
+  let HTMLrisposte = document.querySelectorAll(".risposte");
+  let HTMLrisposteTesto = document.querySelectorAll(".risposte label");
+  
+  for (let i = 0; i < HTMLrisposte.length; i++) {
+    HTMLrisposteTesto[i].innerHTML = risposte[i]
+
+    if (i == indiceRispostaCorretta) {
+      HTMLrisposte[i].addEventListener("click",
+        (event) => {
+          console.log(event.target.id[1]);
+          event.preventDefault();
+
+          diventaVerde(event.target);
+        },
+        false
+      );
+    }
+  }
 
 }
 
@@ -46,10 +70,10 @@ function creaDomanda(categoria) {
     
     let indiceRispostaCorretta = risposte.indexOf(data.results[0].correct_answer);
 
-    console.log(domanda, risposte, indiceRispostaCorretta);
+    buttaInHtml(domanda, risposte, indiceRispostaCorretta);
   }).catch(function (error) {
     alert(error);
   });
 }
 
-creaDomanda(1)
+creaDomanda(1);
