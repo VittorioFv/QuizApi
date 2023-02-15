@@ -2,12 +2,7 @@ body {
   margin: 0px;
   padding: 0px;
 }
-.body{
-  display: flex;
-  justify-content: center;
-  background-color: #778da9;
-  height: 800px;
-}
+
 
 h2 {
   text-align: center;
@@ -41,7 +36,6 @@ h2 {
   text-align: center;
   border-radius: 50px;
   width: 700px;
-  max-height: 500px;
   margin-top: 70px;
   box-shadow: #1b263b 10px 10px 10px 10px;
 }
@@ -72,6 +66,8 @@ label{
   margin-top: 20px;
   color: black;
   transition: all 0.3s;
+  margin-left: -20vw;
+
 }
 
 .home:hover{
