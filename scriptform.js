@@ -14,7 +14,7 @@ function buttaInHtml(domanda, risposte, indiceRispostaCorretta) {
   
   for (let i = 0; i < HTMLrisposte.length; i++) {
     HTMLrisposteTesto[i].innerHTML = risposte[i]
-
+    
     if (risposte[i] == undefined){
       HTMLrisposte[i].remove()
     } else if (i == indiceRispostaCorretta) {
@@ -88,4 +88,4 @@ function creaDomanda(categoria) {
   });
 }
 
-creaDomanda(window.location.hash.charAt(1));
+creaDomanda(parseInt(window.location.hash.charAt(1)+window.location.hash.charAt(2)));

@@ -1,0 +1,16 @@
+.icon {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+#musica .icon{
+    background-image: url("immagini/music.svg");
+}
+
+#film .icon{
+    background-image: url("immagini/watching-movies.svg");
+}
