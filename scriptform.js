@@ -14,7 +14,7 @@ function buttaInHtml(domanda, risposte, indiceRispostaCorretta) {
   document.getElementById("domanda").innerHTML = domanda
 
   let HTMLrisposte = document.querySelectorAll(".risposte");
-  let HTMLrisposteTesto = document.querySelectorAll(".risposte label");
+  let HTMLrisposteTesto = document.querySelectorAll(".risposte h4");
   
   for (let i = 0; i < HTMLrisposte.length; i++) {
     HTMLrisposteTesto[i].innerHTML = risposte[i]
@@ -22,10 +22,9 @@ function buttaInHtml(domanda, risposte, indiceRispostaCorretta) {
     if (i == indiceRispostaCorretta) {
       HTMLrisposte[i].addEventListener("click",
         (event) => {
-          console.log(event.target.id[1]);
           event.preventDefault();
 
-          diventaVerde(event.target);
+          diventaVerde(HTMLrisposte[i]);
         },
         false
       );

@@ -29,7 +29,7 @@ h2 {
   display: flex;
   justify-content: center;
 }
-form{
+#form{
   background-color: paleturquoise;
   padding: 20px;
   display: flex;
