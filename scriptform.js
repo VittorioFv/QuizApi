@@ -1,13 +1,9 @@
-var url = "https://opentdb.com/api.php?amount=1"
-
-var callMeteoApi = fetch(url);
-
-var domanda = ""
-var risposte = []
-var indiceRispostaCorretta = 0
-
 function diventaVerde(elmento) {
   elmento.classList.add("verde");
+}
+
+function diventaRosso(elmento) {
+  elmento.classList.add("rosso");
 }
 
 function buttaInHtml(domanda, risposte, indiceRispostaCorretta) {
@@ -19,12 +15,24 @@ function buttaInHtml(domanda, risposte, indiceRispostaCorretta) {
   for (let i = 0; i < HTMLrisposte.length; i++) {
     HTMLrisposteTesto[i].innerHTML = risposte[i]
 
-    if (i == indiceRispostaCorretta) {
+    if (risposte[i] == undefined){
+      HTMLrisposte[i].remove()
+    } else if (i == indiceRispostaCorretta) {
       HTMLrisposte[i].addEventListener("click",
         (event) => {
           event.preventDefault();
 
           diventaVerde(HTMLrisposte[i]);
+        },
+        false
+      );
+    } else {
+      HTMLrisposte[i].addEventListener("click",
+        (event) => {
+          event.preventDefault();
+
+          diventaRosso(HTMLrisposte[i]);
+          diventaVerde(HTMLrisposte[indiceRispostaCorretta]);
         },
         false
       );
@@ -52,6 +60,11 @@ function shuffle(array) {
 }
 
 function creaDomanda(categoria) {
+  var url = "https://opentdb.com/api.php?amount=1&category=" + categoria;
+
+  console.log(url);
+  var callMeteoApi = fetch(url);
+
   callMeteoApi.then(function (response) {
     return response.json();
   }).then (function (data) {
@@ -75,4 +88,4 @@ function creaDomanda(categoria) {
   });
 }
 
-creaDomanda(1);
+creaDomanda(window.location.hash.charAt(1));
