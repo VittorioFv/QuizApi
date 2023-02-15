@@ -1,6 +1,9 @@
 body {
   margin: 0px;
   padding: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: #778da9;
 }
 
 h2 {
@@ -25,26 +28,39 @@ h2 {
   width: 46%;
   height: 42%;
 }
+
 #form{
-  display: flex;
-  justify-content: center;
-}
-#form{
-  background-color: paleturquoise;
+  background-color: #f2e8cf;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   border-radius: 50px;
+  width: 700px;
+  margin-top: 120px;
+  box-shadow: #1b263b 10px 10px 10px 10px;
 }
 .risposte{
   margin-top: 10px;
+  border-radius: 50px;
+  max-width: 500px;
+  margin-left: calc(50% - 250px);
+  background-color: white;
+  height: 60px;
+  transition: all 0.3s;
+  box-shadow: #1b263b 2px 2px 5px 0px;
+
 }
+
 label{
   margin: 10px;
 }
 
+.risposte:hover{
+  box-shadow: #1b263b 5px 5px 5px 0px;
+
+}
 
 
 
@@ -52,5 +68,14 @@ label{
 /*******************/
 
 .verde {
-  background-color: green;
+  background-color: #6a994e;
+  color: #F2FFEA;
+  box-shadow: #1b263b 5px 7px 5px 0px;
+
+}
+
+.rosso{
+  background-color: #bc4749;
+  color: #ffd7d8;
+  
 }
