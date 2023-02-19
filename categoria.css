@@ -1,3 +1,6 @@
+body{
+    background-color: #f2e8cf;
+}
 .icon {
     background-position: center;
     background-size: contain;
@@ -5,6 +8,8 @@
     width: 50%;
     height: 50%;
     margin: auto;
+    margin-top: 4vw;
+    
 }
 
 #musica .icon{
@@ -21,4 +26,27 @@
 
 #videogame .icon {
     background-image: url("immagini/smart-joystick.svg");
+}
+
+.categoria{
+    border-radius: 50px;
+}
+.categoria:hover{
+    box-shadow: #1b263b 5px 5px 5px 5px;
+}
+a{
+    text-decoration: none;
+    color: rgb(238, 238, 238);
+}
+#musica{
+    background-color: #8cd7c0;
+}
+#libri{
+    background-color: #d9c28d;
+}
+#film{
+    background-color: #95a9d7; 
+}
+#videogame{
+    background-color: #cdda97;
 }
